@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-import Order from '../components/saleOrder/Order'
+import AddNewItem from '../components/items/AddNewItem'
 
-class SaleOrder extends Component {
+class Item extends Component {
     render() {
         const { check } = this.props.params
         return (
             <div className="bgBackGround" style={{ padding: "10px 10px 10px 10px" }} >
-                {(check == "saleOrder") ? <Order /> : ""}
+                {(check == "addItem") ? <AddNewItem /> : ""}
             </div>
         )
     }
 }
-export default SaleOrder
+export default Item

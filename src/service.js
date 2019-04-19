@@ -1,7 +1,7 @@
 // import { is_loader } from './actions'
 const { is_loader } = require('./actions')
 const crypto = require("crypto")
-const strKey=crypto.createHash('md5').update("27iydButojt14").digest('hex');
+const strKey = crypto.createHash('md5').update("27iydButojt14").digest('hex');
 
 const proxys = {
     main: "http://dplus-system.com:3499/",
@@ -9,6 +9,36 @@ const proxys = {
     testPJohn: "http://192.168.20.60:3499/",
     test: "http://dplus-system.com:3599/"
 }
+const defaultItem = [{
+    item_id: 1,
+    barcode: "abcd1234",
+    item_name: "item1",
+    old_price: 10,
+    new_price: 10,
+    unit: "PCS",
+    last_update: "2019-04-19",
+    user_update: "admin"
+},
+{
+    item_id: 2,
+    barcode: "abcd1234",
+    item_name: "item2",
+    old_price: 10,
+    new_price: 10,
+    unit: "PCS",
+    last_update: "2019-04-19",
+    user_update: "admin"
+},
+{
+    item_id: 3,
+    barcode: "abcd1234",
+    item_name: "item3",
+    old_price: 10,
+    new_price: 10,
+    unit: "PCS",
+    last_update: "2019-04-19",
+    user_update: "admin"
+}]
 const public_functions = {
     numberFormat(val = "", fixed = 0) {
         val = parseInt(val)
@@ -88,5 +118,6 @@ const public_functions = {
 }
 module.exports = {
     proxy: proxys,
-    public_function: public_functions
+    public_function: public_functions,
+    defaultItem: defaultItem
 }
